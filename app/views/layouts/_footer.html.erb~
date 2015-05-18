@@ -1,0 +1,13 @@
+<footer>
+  <small>
+    <a href="https://railsrob.wordpress.com/rails-apps/">Other Rails Apps </a>
+    by Robert Wolf
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to "About",   'https://railsrob.wordpress.com/about' %></li>
+      <li><%= link_to "Contact", 'https://contact-demo-mailer.herokuapp.com' %></li>
+      <li><a href="http://railsrob.wordpress.com/blog">Blog</a></li>
+    </ul>
+  </nav>
+</footer>

@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.16'
 ruby '1.9.3'
 gem 'rails_12factor'
+gem 'bootstrap-sass', '2.1'
 
 
 group :development, :test do
