@@ -2,10 +2,21 @@ require 'spec_helper'
 
 describe UsersController do
 
-  describe "GET 'new'" do
-    it "returns http success" do
-      get 'new'
-      response.should be_success
+  describe "DELETE 'destroy'" do
+   describe "as an admin user" do
+      before(:each) do
+        @admin = User.create(name: "Example User", email: "example@tutorial.org", password: "foobar", password_confirmation: "foobar")
+        @admin.toggle!(:admin)
+        sign_in @admin
+      end
+        #Modify destroy action to prevent admin from destroying himself
+        it "should prevent admin from destroying himself" do
+          expect do
+            delete :destroy, id: @admin
+          end.should_not change(User, :count)
+          response.should redirect_to(root_url)
+        end
+      
     end
   end
 

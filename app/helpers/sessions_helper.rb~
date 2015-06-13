@@ -2,7 +2,7 @@ module SessionsHelper
 
   def sign_in(user)
     cookies.permanent[:remember_token] = user.remember_token
-    self.current_user = user #if sign_in should be used without redirect somewhere else
+    self.current_user = user #if sign_in should be used without redirect somewhere else (during session)
   end
   
   def current_user=(user)
