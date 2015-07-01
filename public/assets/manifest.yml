@@ -5,10 +5,10 @@ puzzle.png: puzzle-8cf88c421e934f065050fc2f3f0d2556.png
 puzzle/index.png: puzzle-8cf88c421e934f065050fc2f3f0d2556.png
 rails.png: rails-71e944d9b39043eba50b77788c0d767f.png
 rails/index.png: rails-71e944d9b39043eba50b77788c0d767f.png
-application.js: application-662bce08c1bca7fe8ce52e02bf4efc44.js
-application/index.js: application-662bce08c1bca7fe8ce52e02bf4efc44.js
-application.css: application-d3159909b4cb5a9b8fd338ced2114580.css
-application/index.css: application-d3159909b4cb5a9b8fd338ced2114580.css
+application.js: application-f74860ce0ada737baffab64ce31ea9d0.js
+application/index.js: application-f74860ce0ada737baffab64ce31ea9d0.js
+application.css: application-621b62d2aa5f41dee611b6efc65b2cc7.css
+application/index.css: application-621b62d2aa5f41dee611b6efc65b2cc7.css
 glyphicons-halflings-white.png: glyphicons-halflings-white-b552fc2a3b051cebf4567afb55de29b0.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white-b552fc2a3b051cebf4567afb55de29b0.png
 glyphicons-halflings.png: glyphicons-halflings-b4c22a0ed1f42188864f0046f0862ecb.png
