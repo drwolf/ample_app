@@ -1,0 +1,1 @@
+$('#edit_task_<%= @tasks.id %>').remove();

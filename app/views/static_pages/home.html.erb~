@@ -2,13 +2,28 @@
   <div class="row">
     <aside class="span4">
       <section>
+      <%= form_tag root_path, remote: true do %>
+          <p id="button_and_form">
+            <%= submit_tag "Search", class: "btn btn-default pling" %>
+            <%= text_field_tag :search, params[:search], class: "search_form_prop" %>            
+          </p>
+        <% end %>
+      </section>
+      <section>
         <%= render "shared/user_info" %>
+      </section>
+      <section>
+        <%= render "shared/stats" %>
       </section>
       <section>
         <%= render "shared/micropost_form" %>
       </section>
+      
+      <section class="bg">
+      <%= render "shared/tasks" %>      
+      </section>
     </aside>
-  </div>
+  
    <div class="span8">
       <h3>Micropost Feed</h3>
       <%= render 'shared/feed' %>

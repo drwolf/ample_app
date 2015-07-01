@@ -12,13 +12,13 @@ describe "MicropostPages" do
     
       describe "with invalid information" do
         it "should not create a micropost"  do
-          expect { click_button "Post"}.not_to change(Micropost, :count)
+          expect { click_button "Post" }.not_to change(Micropost, :count)
         end
       
       
       describe "error message" do
         before { click_button "Post" }
-        it { should have_content('error') }
+        it { should have_content('Error') }
       end
      end
      

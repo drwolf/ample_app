@@ -11,7 +11,7 @@ describe UsersController do
       end
         #Modify destroy action to prevent admin from destroying himself
         it "should prevent admin from destroying himself" do
-          lambda do
+          expect do
             delete :destroy, id: @admin
           end.should_not change(User, :count)
           response.should redirect_to(root_url)

@@ -1,0 +1,30 @@
+# Partial for home.html.erb
+<h1>Check List </h1>
+<%= link_to "New Task", new_task_path, id: "new_link" %>
+
+<h2>Incomplete Tasks</h2>
+<div class="tasks" id="incomplete_tasks
+<%= form_tag complete_tasks_path do %>
+	<ul>
+	<% for task in @incomplete_tasks %>
+		<li>
+			<%= check_box_tag "task_ids[]", task.id %>
+			<%= task.name %>
+		</li>
+	<% end %>
+	</ul>
+	<%= submit_tag "Mark as complete" %>
+<% end %>
+</div>
+
+<h2>Complete Tasks</h2>
+<div class="tasks" id="complete_tasks">
+	<ul>
+	<% for task in @complete_tasks %>
+		<li>
+		  <%= check_box_tag "task_ids[]", task.id %>
+			<% task.name %>
+		</li>
+	<% end %>
+	</ul>
+</div>

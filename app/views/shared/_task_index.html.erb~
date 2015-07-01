@@ -1,0 +1,15 @@
+<h4>Planned new microposts:</h4>
+      
+<p><strong><%= link_to "New Topic", new_task_path, class: "blue", id: "new_link", remote: true %></strong></p>
+        
+        <h5>Incompleted:</h5>
+        <p>...</p>
+        <div class="tasks" id="incomplete_tasks">
+          <%= render @incomplete_tasks %>
+        </div>
+      
+        <h5>Completed:</h5>
+        <p>...</p>
+        <div class="tasks" id="complete_tasks">
+          <%= render @complete_tasks %>
+        </div>

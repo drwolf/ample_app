@@ -11,8 +11,9 @@ before_filter :correct_user, only: [:destroy]
       flash[:success] = "Yuhu! You have created yet another micropost!"
       redirect_to root_url
     else
+      flash[:error] = "Error: You have too much content or no content at all. Try again: You got 140 characters :-)"
       @feed_items = current_user.feed.paginate(page: params[:page])
-      render "static_pages/home"
+      redirect_to root_path
     end
   end
 

@@ -1,0 +1,6 @@
+<%= form_for incomplete_task, remote: true do |f| %>
+  <%= f.check_box :complete, checked: false, class: "bong" %>
+ 
+  <%= f.label :complete, incomplete_task.name, class: "bong bing" %>
+  <%= link_to "(remove)", incomplete_task, method: :delete, data: {confirm: "Are you sure?"}, class: "bing", remote: true %>
+<% end %>

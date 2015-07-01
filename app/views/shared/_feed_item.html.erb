@@ -3,7 +3,7 @@
   <span class="user">
     <%= link_to feed_item.user.name, feed_item.user %>
   </span>
-  <span class="content"><%= feed_item.content %></span>
+  <span class="content"><%= wrap(feed_item.content) %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
   </span>
@@ -14,7 +14,4 @@
   <% end %> 
 </li>
 
-<!-- feed_item is actually and instance of the Micropost model because of
-def feed Micropost.where("user_id = ?", id) end in user.rb because of has_many :microposts
-& the delete method transfers through the Browser  the Micropost objects with the Micropost id to 
-destroy action of the TaDa the Micropost#controller - because that is what the REST Api method delete does according to Rails convention -->
+

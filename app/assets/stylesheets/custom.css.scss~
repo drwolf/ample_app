@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  padding-top: 40.5px;
+  padding-top: 60.5px;
 }
 
 section {
@@ -153,12 +153,16 @@ input {
 
 /* microposts */
 
+.counter {
+  float: right;
+}
+
 .microposts {
   list-style: none;
   margin: 10px 0 0 0;
 
   li {
-    padding: 10px 0;
+    padding: 7px 0;
     border-top: 1px solid #e8e8e8;
   }
 }
@@ -173,7 +177,10 @@ input {
   margin-right: 10px;
 }
 aside {
-  
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
 }
 
 /* sidebar */
@@ -184,7 +191,7 @@ aside {
     border-top: 1px solid $grayLighter;
     &:first-child {
       border: 0;
-      padding-top: 20px;
+      padding-top: 2.5px;
     }
     span {
       display: block;
@@ -198,13 +205,82 @@ aside {
       margin-bottom: 3px;
       margin-top: 0px;
     }
+       
   }
 }
+
+.blue {
+  color: $blue;
+}
+
+.bg {
+  background-color: #ededed;
+  padding: 0 15px;
+  margin-top: -15px;
+}
+
+.tasks {
+  display: inline;
+}
+
+.bong {
+  float: left;
+  overflow: auto;
+}
+
+.bing {
+  margin: 0 0 10px 10px;
+}
+/* end of sidebar section elements */
+
+/* search form  */
+.pling {
+   float: left;
+}
+
+.search_form_prop { 
+  width: 74.5%;
+  margin: 0 0 0 1px;  
+}
+
+#button_and_form {
+  margin-bottom: -28px;
+}
+
+/* end of sidebar search form */
 
 .gravatar {
   float: left;
   margin-right: 10px;
 }
+
+.stats {
+  overflow: auto; 
+ a {
+  float: left;
+  padding: 0 10px;
+  border-left: 1px solid $grayLighter;
+  color: gray;
+  &:first-child { 
+    padding-left: 0;
+    border: 0;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $blue;
+  }  
+ } 
+  strong {
+    display: block;
+  }
+ }
+  .user_avatars {
+    overflow: auto;
+    margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+ } 
 
 /* miscellaneous */
 
@@ -231,3 +307,5 @@ aside {
     }
   }
 }
+
+

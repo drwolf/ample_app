@@ -1,0 +1,52 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+
+(($) ->
+  
+  # Author: Mohamad El-Husseini, www.mohamad.im
+  # Light weight character counter for jQuery.
+  # Example: http://jsfiddle.net/yHPg7/6/
+  "use strict"
+  $.fn.counter = (options) ->
+    defaultText = ->
+      options.defaultText.replace /minSize/g, options.minSize
+    count = (elem) ->
+      size = elem.val().length
+      target = elem.siblings(options.targetClass)
+      if size is 0
+        target.html defaultText()
+      else if size < options.minSize
+        target.html (options.minSize - size) + options.minWarning
+      else if size >= options.minSize and size < options.warningSize
+        target.html "&nbsp;"
+      else if size >= options.warningSize and size < options.maxSize
+        target.html (options.maxSize - size) + options.maxWarning
+      else if size >= options.maxSize
+        elem.val elem.val().substring(0, options.maxSize)
+        target.html "0" + options.maxWarning
+    options = $.extend($.fn.counter.defaults, options)
+    @each ->
+      elem = $(this)
+      count elem
+      elem.keyup ->
+        count elem
+ 
+      elem.closest("form").submit ->
+        if elem.val().length < options.minSize
+          $(this).find(options.targetClass).fadeOut("fast").fadeIn("fast").fadeOut("fast").fadeIn "fast"
+          false
+ 
+      elem
+ 
+ 
+  $.fn.counter.defaults =
+    minSize: 15
+    minWarning: " more to go..."
+    maxSize: 25
+    maxWarning: " characters remaining..."
+    warningSize: 20
+    targetClass: ".help-block"
+    defaultText: "Enter at least minSize characters."
+) jQuery
+

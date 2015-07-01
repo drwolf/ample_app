@@ -13,7 +13,7 @@ describe UsersController do
         it "should prevent admin from destroying himself" do
           expect do
             delete :destroy, id: @admin
-          end.should_not change(User, :count)
+          end.to_not change(User, :count)
           response.should redirect_to(root_url)
         end
       
